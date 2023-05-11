@@ -1,0 +1,4 @@
+name: FastLib
+version: '${project.version}'
+main: dev.speed.fastlib.FastLib
+api-version: 1.19
