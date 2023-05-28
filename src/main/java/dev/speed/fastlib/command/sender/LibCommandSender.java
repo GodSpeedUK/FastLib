@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
-@AllArgsConstructor
+@AllArgsConstructor(staticName = "of")
 @Getter
 public class LibCommandSender {
 
@@ -20,10 +20,6 @@ public class LibCommandSender {
 
     public ConsoleCommandSender getConsole(){
         return (ConsoleCommandSender) commandSender;
-    }
-
-    public static LibCommandSender of(CommandSender commandSender){
-        return new LibCommandSender(commandSender);
     }
 
     public boolean isPlayer(){

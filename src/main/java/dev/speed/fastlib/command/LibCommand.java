@@ -47,7 +47,6 @@ public abstract class LibCommand extends Command implements LibCommandFrame {
             return authenticateCommand(this, strings, lCS, authResponse);
         }
 
-
         LibSubCommand subCommand = getSubCommand(strings[0]);
         CommandAuthResponse authResponse = lCS.authorise(subCommand);
         return authenticateCommand(subCommand, strings, lCS, authResponse);

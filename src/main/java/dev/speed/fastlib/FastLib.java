@@ -37,12 +37,12 @@ public final class FastLib extends FastPlugin {
        this.parameterManager.insert(new IntegerParameter());
        this.parameterManager.insert(new DoubleParameter());
        this.parameterManager.insert(new OfflinePlayerParameter());
-       registerCommands(new TestCommand());
 
     }
 
     @Override
     public void onDisable() {
+        this.userManager.runSaveTask();
         // Plugin shutdown logic
     }
 }

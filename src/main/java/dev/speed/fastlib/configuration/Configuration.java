@@ -2,6 +2,7 @@ package dev.speed.fastlib.configuration;
 
 
 import dev.speed.fastlib.file.YamlFile;
+import dev.speed.fastlib.item.Item;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.util.List;
@@ -71,6 +72,10 @@ public interface Configuration {
 
     default boolean getBoolean() {
         return (Boolean) getValue();
+    }
+
+    default Item getItem() {
+        return (Item) getValue();
     }
 
 
