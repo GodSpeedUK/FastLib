@@ -8,6 +8,7 @@ import dev.speed.fastlib.command.parameter.implementation.PlayerParameter;
 import dev.speed.fastlib.configuration.Configuration;
 import dev.speed.fastlib.configuration.Serialization;
 import dev.speed.fastlib.file.YamlFile;
+import dev.speed.fastlib.gui.GUIManager;
 import dev.speed.fastlib.item.Item;
 import dev.speed.fastlib.message.CoreMessages;
 import dev.speed.fastlib.message.TitleMessage;
@@ -25,6 +26,9 @@ public final class FastLib extends FastPlugin {
 
     @Getter
     private UserManager userManager;
+
+    @Getter
+    private GUIManager guiManager;
     @Override
     public void onEnable() {
         instance = this;
