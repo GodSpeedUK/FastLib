@@ -1,10 +1,7 @@
 package dev.speed.fastlib;
 
 import dev.speed.fastlib.command.parameter.ParameterManager;
-import dev.speed.fastlib.command.parameter.implementation.DoubleParameter;
-import dev.speed.fastlib.command.parameter.implementation.IntegerParameter;
-import dev.speed.fastlib.command.parameter.implementation.OfflinePlayerParameter;
-import dev.speed.fastlib.command.parameter.implementation.PlayerParameter;
+import dev.speed.fastlib.command.parameter.implementation.*;
 import dev.speed.fastlib.configuration.Configuration;
 import dev.speed.fastlib.configuration.Serialization;
 import dev.speed.fastlib.file.YamlFile;
@@ -41,6 +38,7 @@ public final class FastLib extends FastPlugin {
        this.parameterManager.insert(new IntegerParameter());
        this.parameterManager.insert(new DoubleParameter());
        this.parameterManager.insert(new OfflinePlayerParameter());
+       this.parameterManager.insert(new StringParameter());
 
     }
 

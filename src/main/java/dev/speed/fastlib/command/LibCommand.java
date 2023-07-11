@@ -62,8 +62,8 @@ public abstract class LibCommand extends Command implements LibCommandFrame {
                 return true;
             case AUTHENTICATED:
 
-                if(parameterHolders.size() > 0){
-                    for(ParameterHolder parameterHolder: parameterHolders.values()){
+                if(libCommandFrame.getParameterHolders().size() > 0){
+                    for(ParameterHolder parameterHolder: libCommandFrame.getParameterHolders().values()){
                         if(!parameterHolder.canExecute(strings)){
                             try{
                                String placeholder = strings[parameterHolder.getArgument()];
