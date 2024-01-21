@@ -1,6 +1,5 @@
 package dev.speed.fastlib.command;
 
-import dev.speed.fastlib.command.parameter.Parameter;
 import dev.speed.fastlib.command.parameter.ParameterHolder;
 import dev.speed.fastlib.command.sender.LibCommandSender;
 import dev.speed.fastlib.message.CoreMessages;
@@ -9,7 +8,9 @@ import lombok.Setter;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public abstract class LibCommand extends Command implements LibCommandFrame {

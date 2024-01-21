@@ -4,6 +4,7 @@ package dev.speed.fastlib.user.user;
 import dev.speed.fastlib.FastLib;
 import dev.speed.fastlib.command.sender.LibCommandSender;
 import dev.speed.fastlib.file.gson.GsonUtil;
+import dev.speed.fastlib.tempdata.data.TempData;
 import dev.speed.fastlib.user.data.UserData;
 import dev.speed.fastlib.user.manager.UserManager;
 import org.bukkit.Bukkit;
@@ -65,6 +66,10 @@ public class User {
         GsonUtil.save(UserManager.FOLDER, uuid.toString(), this);
     }
 
+    public <T extends TempData> T getTempData(Class<T> type) {
+        T tempData = FastLib.getInstance().getTempDataStore().getTempData(uuid, type);
+        return type.cast(tempData);
+    }
     public static User get(UUID uuid) {
         return FastLib.getInstance().getUserManager().getUser(uuid);
     }
